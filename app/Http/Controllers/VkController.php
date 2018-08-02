@@ -154,7 +154,6 @@ class VkController extends Controller
         $res = $this->client->request('GET', 'https://api.vk.com/method/wall.getComments?' . $get_params);
 
         $messageDate = Carbon::createFromTimestamp($messageDate);
-        $commentDate = Carbon::createFromTimestamp(1474628310);
 
         return $messageDate->diffInHours($commentDate);
 
